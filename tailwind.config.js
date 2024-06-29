@@ -7,10 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        antonio: ["var(--font-antonio)"],
+        league_spartan: ["var(--font-league_spartan)"],
+      },
+      colors: {
+        blackish: "#070724",
+        darkgray: "#38384f",
+        lightgray: "#838391",
+        grayhover: "#d8d8d8",
+        greenblue: "#419ebb",
+        yellowish: "#eda249",
+        violetlike: "#6f2ed6",
+        orange1: "#d14c32",
+        orange2: "#d83a34",
+        orange3: "#cd5120",
+        greenish: "#1ec2a4",
+        blueish: "#2d68f0",
       },
     },
   },

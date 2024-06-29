@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Planets fact site solution
 
-## Getting Started
+This is a solution to the [Planets fact site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each planet page and toggle between "Overview", "Internal Structure", and "Surface Geology"
+
+### Screenshot
+
+![](/public/Screenshot.jpg)
+
+
+
+### Links
+
+- Solution URL: Pending
+- Live Site URL: Pending
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Tailwins CSS
+- Flexbox
+- Mobile-first workflow
+- [Next.js](https://nextjs.org/) - React framework
+
+
+
+### What I learned
+
+Select the particular item from the data.json file, from the PlanetComponent.js
+
+```js
+const getPlanet = useCallback(() => {
+    const thisPlanet = planetsData.find((i) => i.name === `${planetName}`);
+    return thisPlanet;
+  }, [planetName]);
+
+  useEffect(() => {
+    setPlanet(getPlanet());
+  }, [getPlanet]);
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Each planet is rendered dynamically through a reusable component, by calling it from every planet page:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```js
+import PlanetComponent from "@/components/PlanetComponent";
 
-## Learn More
+export default function Earth() {
+  return (
+    <PlanetComponent
+      planetName="Earth"
+      decorColor="decoration-violetlike"
+      bgColor="bg-violetlike"
+      mobileSize={171}
+      tabletSize={284}
+      desktopSize={450}
+    />
+  );
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Continued development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Continue improving my coding skills by developing challenging applications, like this one.
 
-## Deploy on Vercel
+### Useful resources
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Responsive Navbar with Next.js and Tailwind](https://www.youtube.com/watch?v=pxxthSFvXFA) - Video tutorial. Provided an example of responsive navbar.
+- ChatGPT provided an example for selecting a particular planet data, similar to the code snippet above, getPlanet() function.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+
+
+- Website - [Guillermo Dominguez](https://gdominguez2024.vercel.app/)
+- Frontend Mentor - [@memominguez](https://www.frontendmentor.io/profile/memominguez)
+
+## Acknowledgments
+
+
+Thanks to all those who share their knowledge, free of charge, through video tutorials in the youtube platform.
+
