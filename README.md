@@ -36,8 +36,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: Pending
-- Live Site URL: Pending
+
+- Solution URL:  [Github repository](https://github.com/memominguez/planets-fact-site)
+- Live Site URL:  [Vercel](https://planets-fact-site-drab.vercel.app)
+
 
 ## My process
 
